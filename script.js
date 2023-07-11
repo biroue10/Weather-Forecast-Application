@@ -5,7 +5,7 @@ const result = document.querySelector('.result')
 //function that fetch api
 async function rechercher(valeur){
     try{
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=ff300c87200a4c74ab0160002231007&q=${valeur}&days=1&aqi=no&alerts=no`,{mode: 'cors'})
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=ff300c87200a4c74ab0160002231007&q=${valeur}&days=1&aqi=no&alerts=no`,{mode: 'cors'})
         const donnee = await response.json()
         const name = document.createElement('div')
         name.textContent=donnee.location.name
