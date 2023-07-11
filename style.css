@@ -29,10 +29,13 @@ button{
 }
 .logo{
     text-transform: capitalize;
-    color: aliceblue;
     font-size: 2.5rem;
     font-weight: 900;
     font-style: italic;
+background: linear-gradient(to right, #121FCF 0%, #2626FF 50%, #CF1512 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
 
 }
 .container{
