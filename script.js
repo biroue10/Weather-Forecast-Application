@@ -22,7 +22,10 @@ async function rechercher(valeur){
         const parent = document.createElement('div')
         parent.classList.add('parent')
         const temperature = document.createElement('div')
+        const degreeC = document.createElement('span')
+        degreeC.innerHTML='<sup>°c</sup>'
         temperature.textContent=donnee.current.temp_c
+        temperature.appendChild(degreeC)
         temperature.classList.add('temperature')
         parent.append(name,country,localtime,tz_id,current_condition_text,current_condition_icon)
         result.append(temperature,parent)
