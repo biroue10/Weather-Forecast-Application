@@ -15,14 +15,19 @@ async function rechercher(valeur){
         localtime.textContent=donnee.location.localtime
         const tz_id = document.createElement('div')
         tz_id.textContent=donnee.location.tz_id
+        const current_condition_text = document.createElement('div')
+        current_condition_text.textContent=donnee.current.condition.text
+        const current_condition_icon = document.createElement('img')
+        current_condition_icon.src=donnee.current.condition.icon
         const parent = document.createElement('div')
         parent.classList.add('parent')
         const temperature = document.createElement('div')
         temperature.textContent=donnee.current.temp_c
         temperature.classList.add('temperature')
-        parent.append(name,country,localtime,tz_id)
+        parent.append(name,country,localtime,tz_id,current_condition_text,current_condition_icon)
         result.append(temperature,parent)
         input.value=''
+        console.log(donnee)
     }
     catch(error){
         console.log(error)
